@@ -57,3 +57,5 @@ Once in the database container, you can get a MySQL CLI in the usual WAY
 mysql -uroot -p<password> 
 ```
 # Networking-Platform-
+# Artist-Networking-Platform
+# Artist-Networking-Platform
