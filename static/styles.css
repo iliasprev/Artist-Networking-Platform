@@ -1189,11 +1189,12 @@ button {
 }
 
 .login-button{
-    background-color: #ff8177;
-    height: 30px;
-    width: 70px;
-    border: 1px solid black;
-    border-radius: 4px;
+        background-color: #ff8177;
+        height: 30px;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 10px;
+   
 }
 
 
