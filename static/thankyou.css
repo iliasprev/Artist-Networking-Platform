@@ -1,0 +1,42 @@
+/* thankyou.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for default text */
+    text-align: center; /* Center text alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.thank-you-container {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333; /* Slightly lighter black background for contrast */
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #ff0000; /* Red color for "Thank You!" text */
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff0000; /* Red color for the link */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}

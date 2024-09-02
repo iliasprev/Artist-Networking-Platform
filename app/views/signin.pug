@@ -1,0 +1,126 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Login Page
+    link(rel="stylesheet", href="styles.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+  body
+
+    // Menu Bar
+    nav.navbar
+      .navbar__container
+        a#navbar__logo(href="/homepage")
+          img.logo-image(src="images/mylogogr.png", alt="GrooveGrid Logo")
+          | GrooveGrid
+        div.navbar_toggle#mobile-menu
+          span.bar
+          span.bar
+          span.bar
+        ul.navbar__menu
+          li.navbar__item
+            a.navbar__links(href="homepage") Home
+          li.navbar__item
+            a.navbar__links(href="network") Network
+          li.navbar__item
+            a.navbar__links(href="opportunities") Opportunities
+          li.navbar__item
+            a.navbar__links(href="ourstory") Our story
+          li.navbar__btn
+            a.button(href="signin") Sign in/Sign Up
+
+    // Sign In/Sign Up Forms
+    //- .login-container
+    //-   .login-form
+    //-     h2.login-title log
+    //-     form(action="/login", method="POST")
+    //-       .form-group
+    //-         label(for="username") Username
+    //-         input(type="text", id="username", name="username", placeholder="Enter your username", required)
+    //-       .form-group
+    //-         label(for="password") Password
+    //-         input(type="password", id="password", name="password", placeholder="Enter your password", required)
+    //-       input.login-button(type="submit" value="Login")
+
+
+    .wrapper
+      .form-wrapper.sign-in
+        form(action="/login" method="POST") 
+          h2 Login
+          .input-group
+            input(type="text", id="username",name="username",required)
+            label(for="username") Email
+          .input-group
+            input(ype="password", id="password", name="password", required)
+            label(for="password") Password
+          .remember
+            label
+              input(type="checkbox")
+              | Remember me
+          input.login-button(type="submit" value="LOGIN")
+          .signUp-link
+            p Don't have an account? 
+              a.signUpBtn-link(href="#") Sign Up
+
+      .form-wrapper.sign-up
+        form(action="/Step1" method="POST") 
+          h2 SIGN UP
+          .input-group
+            input(type="text", id="username",name="username",required)
+            label(for="username") Username
+          .input-group
+            input(type="text", id="Name", name="Name", required)
+            label(for="Name") Email
+          .input-group
+            input(type="password", id="password", name="password", required)
+            label(for="password") Password
+          //- .remember
+          //-   label
+          //-     input(type="checkbox")
+          //-     | Remember me
+          input.login-button(type="submit" value="Next")
+
+      //- .form-wrapper.sign-up
+      //-   form(action="/signup" method="POST")
+      //-     .row
+      //-       .column1
+      //-         h3.title Billing Address
+      //-         .input-box1
+      //-           span Full Name :
+      //-           input(type="text", placeholder="Jacob Prev")
+      //-         .input-box2
+      //-           span Email :
+      //-           input(type="email", placeholder="example@example.com")
+            //- .column2
+            //-   h3.title Payment
+            //-   .input-boxC2
+            //-     span Cards Accepted :
+            //-     img(src="images/payments.png", alt="Accepted Cards", style="width: 100%; height: auto;")
+            //-   .input-boxC3
+            //-     span Name on card :
+            //-     input(type="text", placeholder="Mr Jacob Prev")
+            //-   .input-boxC4
+            //-     span Credit Card Number :
+            //-     input(type="number", placeholder="1111 2222 3333 4444")
+            //-   .input-boxC5
+            //-     span Exp. Month :
+            //-     input(type="text", placeholder="August")
+            //-   .flex
+            //-     .input-boxC6
+            //-       span Exp. Year :
+            //-       input(type="text", placeholder="2025")
+            //-     .input-boxC7
+            //-       span CVV :
+            //-       input(type="number", placeholder="123")
+          button.btn(type="submit") Submit
+          .signUp-link
+            p Already have an account? 
+              a.signInBtn-link(href="#") Sign In
+
+
+
+    script(src="app.js")

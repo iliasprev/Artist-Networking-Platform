@@ -1,0 +1,95 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    // Font link for icons
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    link(rel="stylesheet", href="card-slider.css")
+    script(src="script.js")
+  body
+    nav.navbar
+      .navbar__container
+        a#navbar__logo(href="/homepage")
+          img.logo-image(src="images/mylogogr.png", alt="GrooveGrid Logo")
+          | GrooveGrid
+        .navbar_toggle#mobile-menu
+          span.bar
+          span.bar
+          span.bar
+        ul.navbar__menu
+          li.navbar__item
+            a.navbar__links(href="homepage") Home
+          li.navbar__item
+            a.navbar__links(href="network") Network
+          li.navbar__item
+            a.navbar__links(href="opportunities") Opportunities
+          li.navbar__item
+            a.navbar__links(href="ourstory") Our Story
+          li.navbar__btn
+            a.button(href="signin") Sign In/Sign Up
+    // New Title and Paragraph
+    .info-section
+      h1 Welcome to the Network List
+      p Our networking list is getting updated for subscribers every 10 days.
+    .wrapper1
+      i#left.fa-solid.fa-angle-left.arrow-left
+      ul.carousel
+        li.card
+          .img
+            img(src="images/djpic1.jpg", alt="img", draggable="false")
+          h2 Chris Steward
+          span House Dj
+          p email: chrisdj@gmail.com
+          p phone number 0774323253
+        li.card
+          .img
+            img(src="images/djpic2.jpg", alt="img", draggable="false")
+          h2 Nick Con
+          span House Dj
+          p email: nickcon@org.co
+          p phone number 0774321223
+        li.card
+          .img
+            img(src="images/djpic3.jpg", alt="img", draggable="false")
+          h2 Alex Winters
+          span House Dj
+          p email: alexw@bookings.com
+          p phone number 0774328763
+        li.card
+          .img
+            img(src="images/djpic4.jpg", alt="img", draggable="false")
+          h2 Dan Don
+          span House Dj
+          p email: dandon@booking.org
+          p phone: 07456182341
+        li.card
+          .img
+            img(src="images/promoter1.jpg", alt="img", draggable="false")
+          h2 Angelina King
+          span Talent Booker - Ministry of Sound
+          p email: AngelinaK@ministryofsound.co.uk
+          p phone: 074446665
+        li.card
+          .img
+            img(src="images/promoter2.jpg", alt="img", draggable="false")
+          h2 Tita Sina
+          span Festivals Promoter UK
+          p email: titaS@festivals.co.uk
+          p phone: 0744569817
+        li.card
+          .img
+            img(src="images/promoter3.webp", alt="img", draggable="false")
+          h2 Solly K
+          span BBC Radio Station Owner
+          p email: Solly@bcc.ac.uk
+          p phone: 07453212521
+        li.card
+          .img
+            img(src="images/promoter4.jpg", alt="img", draggable="false")
+          h2 Michael May
+          span Venue Owner of Egg London
+          p email: michaelm@egg.co.uk
+          p phone: 0756701234
+      i#Right.fa-solid.fa-angle-right.arrow-right
+    script(src="script.js")

@@ -1,0 +1,111 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Payment
+    link(rel="stylesheet", href="styles.css")
+  body
+    header
+      nav.navbar
+        .navbar__container
+          a(href="/homepage", id="navbar__logo")
+            img.logo-image(src="images/mylogogr.png", alt="GrooveGrid Logo")
+            | GrooveGrid
+          .navbar_toggle#mobile-menu
+            span.bar
+            span.bar
+            span.bar
+          ul.navbar__menu
+            li.navbar__item
+              a.navbar__links(href="homepage") Home
+            li.navbar__item
+              a.navbar__links(href="network") Network
+            li.navbar__item
+              a.navbar__links(href="opportunities") Opportunities
+            li.navbar__item
+              a.navbar__links(href="ourstory") Our story
+            li.navbar__btn
+              a.button(href="signin") Sign in/Sign Up
+    .wrapper
+      .form-wrapper.sign-in
+        form(action="/signin" method="POST") 
+          h2 Billing Address
+          .input-group
+            input(type="text", id="Address",name="Address",required)
+            label(for="Address") Address
+          .input-group
+            input(type="text", id="City",name="City",required)
+            label(for="Address") City
+          .input-group
+            input(type="text", id="Zipcode",name="Zipcode",required)
+            label(for="Zipcode") Zipcode
+          .input-group
+            input(type="text", id="CardName",name="CardName",required)
+            label(for="CardName") Name on Card
+          .input-group
+            input(type="text", id="Cardnum",name="Cardnum",required)
+            label(for="Cardnum") Card Number
+          .input-group
+            input(type="text", id="ExpDate",name="ExpDate",required)
+            label(for="ExpDate") Exp Date
+          .input-group
+            input(type="text", id="CVV",name="CVV",required)
+            label(for="CVV") CVV 
+          .remember
+            label
+              input(type="checkbox")
+              | Remember me
+          input.login-button(type="submit" value="Subscribe/Sign Up")
+            //- .signUp-link
+            //-   p Don't have an account? 
+            //-     a.signUpBtn-link(href="#") Sign Up
+script(src="app.js")
+
+    //- .container
+    //-   form(action="thankyou", method="post") // Redirects to thankyou.pug
+    //-     .row
+    //-       .column
+    //-         h3.title Billing Address
+    //-         .input-box
+    //-           span Full Name :
+    //-           input(type="text", placeholder="Jacob Prev")
+    //-         .input-box
+    //-           span Email :
+    //-           input(type="email", placeholder="example@example.com")
+    //-         .input-box
+    //-           span Address :
+    //-           input(type="text", placeholder="Room - Street - Locality")
+    //-         .input-box
+    //-           span City :
+    //-           input(type="text", placeholder="Berlin")
+    //-         .flex
+    //-           .input-box
+    //-             span State :
+    //-             input(type="text", placeholder="Germany")
+    //-           .input-box
+    //-             span Zip Code :
+    //-             input(type="number", placeholder="123 456")
+    //-       .column
+    //-         h3.title Payment
+    //-         .input-box
+    //-           span Cards Accepted :
+    //-           img(src="images/payments.png", alt="Accepted Cards", style="width: 300px; height: auto;")
+    //-         .input-box
+    //-           span Name on card :
+    //-           input(type="text", placeholder="Mr Jacob Prev")
+    //-         .input-box
+    //-           span Credit Card Number :
+    //-           input(type="number", placeholder="1111 2222 3333 4444")
+    //-         .input-box
+    //-           span Exp. Month :
+    //-           input(type="text", placeholder="August")
+    //-         .flex
+    //-           .input-box
+    //-             span Exp. Year :
+    //-             input(type="text", placeholder="2025")
+    //-           .input-box
+    //-             span CVV :
+    //-             input(type="number", placeholder="123")
+    //-     button.btn(type="submit") Submit
+    //- script(src="app.js")

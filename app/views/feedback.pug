@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Feedback - GrooveGrid
+    link(rel="stylesheet", href="feedback.css")
+  body
+    header
+      a.logo(href="/")
+        img.logo-image(src="images/mylogogr.png", alt="GrooveGrid Logo")
+    
+    main
+      section.feedback-form
+        h1 We Value Your Feedback
+        p Your feedback helps us improve GrooveGrid. Please let us know your thoughts and suggestions.
+
+        form(action="#", method="post")
+          label(for="name") Name (Optional):
+          input#name(type="text", name="name", placeholder="Your Name")
+
+          label(for="email") Email (Optional):
+          input#email(type="email", name="email", placeholder="Your Email")
+
+          label(for="feedback") Feedback:
+          textarea#feedback(name="feedback", rows="5", placeholder="Your Feedback" required)
+
+          button(type="submit") Submit Feedback
+    
+    footer
+      p © 2024 GrooveGrid. All Rights Reserved.

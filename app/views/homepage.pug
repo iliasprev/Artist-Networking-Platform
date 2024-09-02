@@ -1,0 +1,96 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title GrooveGrid
+    link(rel="stylesheet", href="styles.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+  body
+    header
+    nav.navbar
+      .navbar__container
+        a(href="/homepage", id="navbar__logo")
+          img.logo-image(src="images/mylogogr.png", alt="GrooveGrid Logo")
+          | GrooveGrid
+        .navbar_toggle#mobile-menu
+          span.bar
+          span.bar
+          span.bar
+        ul.navbar__menu
+          li.navbar__item
+            a.navbar__links(href="homepage") Home
+          li.navbar__item
+            a.navbar__links(href="network") Network
+          li.navbar__item
+            a.navbar__links(href="opportunities") Opportunities
+          li.navbar__item
+            a.navbar__links(href="ourstory") Our story
+          li.navbar__btn
+            a.button(href="signin") Sign in/Sign Up
+
+    //- Hero Section
+    .main
+      .main__container
+        .main__content
+          h1 A Networking Platform
+          h2 For Artists
+          p See what makes us different
+          //- a.main__btn(href="/network") Network List
+        .main__img--container
+          img#main__img(src="images/design.svg", alt="Design Illustration")
+
+    //- Services Section
+    .services
+      h1 See what the hype is about
+      .services__container
+        .services__card
+          h2 Sign up for pop ups
+          p Get exposure in our London pop ups
+          a.button.apply-btn(href="/apply1") Apply Now
+        .services__card
+          h2 Are you ready?
+          p Access our networking database
+          a.button.subscribe-btn(href="/network") Subscribe
+
+    //- Footer Section
+    .footer__container
+      .footer__links
+        .footer__link--wrapper
+          .footer__link--items
+            h2 About Us
+            a(href="/opportunities") Opportunities
+          .footer__link--items
+            h2 Contact
+            a(href="/contact-us") Contact us
+            a(href="/feedback") Feedback
+            a(href="https://discord.gg/your-discord-link", target="_blank") Join our Discord
+        .footer__link--wrapper
+          //- .footer__link--items
+          //-   h2 Opportunities
+          .footer__link--items
+            h2 Legal
+            a(href="/privacy-policy") Privacy Policy
+            a(href="/cookie-policy") Cookie Policy
+            a(href="/terms-of-use") Terms of Use
+
+      .footer__bottom
+        .footer__logo
+          a(href="/", id="footer__logo")
+            img.footer__logo--img(src="images/mylogogr.png", alt="GrooveGrid Logo")
+            span GROOVEGRID
+        p.website__rights GrooveGrid 2024. All rights reserved.
+        .social__icons
+          a.social__icon--link(href="https://www.facebook.com/yourpage", target="_blank")
+            i.fab.fa-facebook-f
+          a.social__icon--link(href="https://twitter.com/yourprofile", target="_blank")
+            i.fab.fa-twitter
+          a.social__icon--link(href="https://www.instagram.com/yourprofile", target="_blank")
+            i.fab.fa-instagram
+          a.social__icon--link(href="https://www.linkedin.com/company/yourcompany", target="_blank")
+            i.fab.fa-linkedin-in
+
+    script(src="app.js")
