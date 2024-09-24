@@ -1,0 +1,187 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #131313;
+    padding: 0px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #131313;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  #navbar__logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .logo-image {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar__menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar__item {
+    margin-left: 20px;
+  }
+  
+  .navbar__links {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar__links:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+  
+  .navbar__btn .button {
+    background-color: #ff0844;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .navbar__btn .button:hover {
+    background-color: #4837ff;
+  }
+  
+  /* Mobile Menu Toggle (Optional) */
+  .navbar_toggle {
+    display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
+  
+  /* Form Styles */
+  .consent-container, .registration-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px;
+    background-color: #ff0844;
+    color: #131313;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar__menu {
+      display: none;
+    }
+  
+    .navbar_toggle {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+ /* Free Account Registration Section */
+.registration-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 80px auto 20px auto; /* Margin adjusted to account for fixed navbar */
+    box-shadow: 0 0 10px #ff0844(0, 0, 0, 0.1);
+    text-align: center; /* Center align text and button */
+  }
+  
+/* Free Account Registration Section */
+.registration-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 80px auto 20px auto; /* Margin adjusted to account for fixed navbar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .consnet-info {
+    color: white;
+    border: 1px solid;
+    height: 100px;
+    width: 50%;
+    margin: auto;
+    padding: 1%;
+  }
+ 
+  
+  
+  

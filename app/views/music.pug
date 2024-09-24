@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title GrooveGrid
+    link(rel="stylesheet" href="music.css")
+    
+    //- Internal CSS for button styling
+    style.
+      /* Style for the APPLY button */
+      button {
+          background-color: #28a745; 
+          color: white; 
+          border: none; 
+          padding: 10px 20px; 
+          font-size: 16px; 
+          border-radius: 5px; 
+          cursor: pointer; 
+      }
+
+      /* Add hover effect */
+      button:hover {
+          background-color: #218838; 
+      }
+
+  body
+    //- Navigation Bar
+    nav.navbar
+      .navbar__container
+        a(href="/logHomepage" id="navbar__logo")
+          img.logo-image(src="images/mylogogr.png" alt="GrooveGrid Logo")
+          | GrooveGrid
+        .navbar_toggle#mobile-menu
+          span.bar
+          span.bar
+          span.bar
+        ul.navbar__menu
+          li.navbar__item
+            a.navbar__links(href="logHomepage") Home
+          li.navbar__item
+            a.navbar__links(href="Promote") Promote
+          li.navbar__item
+            a.navbar__links(href="lognetwork") Network
+          li.navbar__item
+            a.navbar__links(href="logopp") Opportunities
+          li.navbar__item
+            a.navbar__links(href="logOurstory") Our Story
+          li.navbar__btn
+            a.button(href="outhomepage") Logout
+
+    //- Main Content
+    h1 All subscribers get their music/mixes promoted on our website
+    p JETFU3L - CAROLINE
+    audio(controls)
+      source(src="JETFU3L - CAROLINE (DNB REMIX).mp3" type="audio/mpeg")
+    p PREVGREC0 - HAVING A GOOD TIME
+    audio(controls)
+      source(src="prevgreco - having a good time 1.mp3" type="audio/mpeg")
+    p If you want to promote your music and you are a subscriber, apply below:
+    a.promote(href="apply1") Apply 
+    
+

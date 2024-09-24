@@ -71,12 +71,52 @@ app.post("/thankyou",(req,res)=>{
     res.render("thankyou");
 })
 
+app.get('/newsubplan', (req, res) => {
+  res.render('newsubplan');  // Renders the Pug template or HTML page
+});
+
+app.get('/signinbus', (req, res) => {
+    res.render('consent'); 
+  });
+
+app.get('/articles', (req, res) => {
+    res.render('articless'); // Make sure you have a 'business_signup.pug' template
+  });
+
+app.get('/terms-of-usee', (req, res) => {
+    res.render('terms-of-use'); // Make sure you have an 'articles.pug' template
+  });
+app.get('/Feedback', (req, res) => {
+    res.render('feedbackk'); // Make sure you have an 'articles.pug' template
+  });
+
+  app.get('/Promote', (req, res) => {
+    res.render('music'); // Make sure you have a 'music.pug' template
+});
+
+app.get('/thankyouapply', (req, res) => {
+    res.render('thankyouapply');
+});
+
+app.get('/logapply1', (req, res) => {
+    res.render('logapply1');
+});
+app.get('/logarticles', (req, res) => {
+    res.render('logarticles');
+});
+
+
+
+  
+
+
 
 // app.post("/signin",async function(req,res){
 //     console.log("==>ilias",req.body);
 //     parameters = req.body;
 // })
 var myDetails = {};
+var timer = "";
 
 app.post("/Step1",async function(req,res){
     console.log("==>Step1",req.body);
@@ -127,7 +167,16 @@ app.post("/signin",async function(req,res){
         var UserId = await user.getIdFromEmail();
         console.log("DB MAIL and PASSWORD",UserId);
         if((UserId[0].Email == parameters.username) && (UserId[0].Password == parameters.password)){
-            res.render("logHomepage");
+            timer = "1";
+            console.log("Timer started. Variable is now:---->", timer);
+
+    // Set a timeout to reset the variable back after 1 minute (60000 milliseconds)
+    setTimeout(() => {
+        timer = ""; // Reset the variable after 1 minute
+        console.log("1 minute has passed. myVariable is now:", timer);
+    }, 300000); // 1 minute = 60000 milliseconds
+        res.render("logHomepage");
+
         }else{
             res.redirect("/signin");
                 }
@@ -135,7 +184,43 @@ app.post("/signin",async function(req,res){
         console.error(`Error while comparing `, err.message);   
     }
  })
- 
+//Authentication and managing user logIns
+ app.get('/logHomepage', (req, res) => {
+        if(timer == "1"){
+            res.render('logHomepage');
+        }else{
+            res.render("homepage")
+        }// Renders the Pug template or HTML page
+  }); 
+
+  app.get('/lognetwork', (req, res) => {
+    if(timer == "1"){
+        res.render('lognetwork');
+    }else{
+        res.render("homepage")
+    }// Renders the Pug template or HTML page
+}); 
+
+app.get('/logopp', (req, res) => {
+    if(timer == "1"){
+        res.render('logopp');
+    }else{
+        res.render("homepage")
+    }// Renders the Pug template or HTML page
+}); 
+
+app.get('/logOurstory', (req, res) => {
+    if(timer == "1"){
+        res.render('logOurstory');
+    }else{
+        res.render("homepage")
+    }// Renders the Pug template or HTML page
+}); 
+
+app.get('/outhomepage', (req, res) => {
+    timer = "";// Renders the Pug template or HTML page
+    res.send("You have been successfully logged out")
+}); 
 // New cOde starts here
 
 app.post("/apply",async function(req,res){
@@ -159,8 +244,26 @@ app.post("/apply",async function(req,res){
 // New code ends here
 
 
+app.post("/consent",async function(req,res){
+    console.log("==>ConsentPost",req.body);
+    parameters = req.body;
+    var user = new User(parameters.fullname);
+    console.log("INSIDE Consent",parameters);
+    try {
+        let restt = await user.Bu_consent(parameters);
+         if(restt){
+                console.log("Res from post Apply",restt);
+                res.redirect("/thankyouapply");
+            }else{
+                res.send("An erro occured. Please try again");
+            }
+        }
+        catch (err) {
+        console.error(`Error while comparing `, err.message);
+    }
+ })
 
-// new ilias code payment starts here//
+
 
 
 

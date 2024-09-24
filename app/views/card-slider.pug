@@ -20,13 +20,15 @@ html(lang="en")
           span.bar
         ul.navbar__menu
           li.navbar__item
-            a.navbar__links(href="homepage") Home
+            a.navbar__links(href="logHomepage") Home
           li.navbar__item
-            a.navbar__links(href="network") Network
+            a.navbar__links(href="Promote") Promote
           li.navbar__item
-            a.navbar__links(href="opportunities") Opportunities
+            a.navbar__links(href="lognetwork") Network
           li.navbar__item
-            a.navbar__links(href="ourstory") Our Story
+            a.navbar__links(href="logopp") Opportunities
+          li.navbar__item
+            a.navbar__links(href="logOurstory") Our Story
           //- li.navbar__btn
           //-   a.button(href="signin") Sign In/Sign Up
 
@@ -35,67 +37,86 @@ html(lang="en")
       h1 Welcome to the Network List
       p Our networking list is getting updated for subscribers every 10 days.
 
-    .wrapper1
-      // Left Arrow
-      i#left.fa-solid.fa-angle-left.arrow-left
-      ul.carousel
-        li.card
-          .img
-            img(src="images/djpic1.jpg" alt="img" draggable="false")
-          h2 Chris Steward
-          span House Dj
-          p email: chrisdj@gmail.com
-          p phone number 0774323253
-        li.card
-          .img
-            img(src="images/djpic2.jpg" alt="img" draggable="false")
-          h2 Nick Con
-          span House Dj
-          p email: nickcon@org.co
-          p phone number 0774321223
-        li.card
-          .img
-            img(src="images/djpic3.jpg" alt="img" draggable="false")
-          h2 Alex Winters
-          span House Dj
-          p email: alexw@bookings.com
-          p phone number 0774328763
-        li.card
-          .img
-            img(src="images/djpic4.jpg" alt="img" draggable="false")
-          h2 Dan Don
-          span House Dj
-          p email: dandon@booking.org
-          p phone: 07456182341
-        li.card
-          .img
-            img(src="images/promoter1.jpg" alt="img" draggable="false")
-          h2 Angelina King
-          span Talent Booker - Ministry of Sound
-          p email: AngelinaK@ministryofsound.co.uk
-          p phone:074446665
-        li.card
-          .img
-            img(src="images/promoter2.jpg" alt="img" draggable="false")
-          h2 Tita Sina
-          span Festivals Promoter UK
-          p email: titaS@festivals.co.uk
-          p phone:0744569817
-        li.card
-          .img
-            img(src="images/promoter3.webp" alt="img" draggable="false")
-          h2 Solly K
-          span BBC Radio Station Owner
-          p email: Solly@bcc.ac.uk
-          p phone: 07453212521
-        li.card
-          .img
-            img(src="images/promoter4.jpg" alt="img" draggable="false")
-          h2 Michael May
-          span Venue Owner of Egg London
-          p email: michaelm@egg.co.uk
-          p phone: 0756701234
-      // Right Arrow
-      i#Right.fa-solid.fa-angle-right.arrow-right
+    //- Subscription check
+    .subscriber-content
+      h2#restricted-text 
+      .wrapper1.hidden 
+        // Left Arrow
+        i#left.fa-solid.fa-angle-left.arrow-left
+        ul.carousel
+          li.card
+            .img
+              img(src="images/djpic1.jpg" alt="img" draggable="false")
+            h2 Chris Steward
+            span House Dj
+            p email: chrisdj@gmail.com
+            p phone number 0774323253
+          li.card
+            .img
+              img(src="images/djpic2.jpg" alt="img" draggable="false")
+            h2 Nick Con
+            span House Dj
+            p email: nickcon@org.co
+            p phone number 0774321223
+          li.card
+            .img
+              img(src="images/djpic3.jpg" alt="img" draggable="false")
+            h2 Alex Winters
+            span House Dj
+            p email: alexw@bookings.com
+            p phone number 0774328763
+          li.card
+            .img
+              img(src="images/djpic4.jpg" alt="img" draggable="false")
+            h2 Dan Don
+            span House Dj
+            p email: dandon@booking.org
+            p phone: 07456182341
+          li.card
+            .img
+              img(src="images/promoter1.jpg" alt="img" draggable="false")
+            h2 Angelina King
+            span Talent Booker - Ministry of Sound
+            p email: AngelinaK@ministryofsound.co.uk
+            p phone:074446665
+          li.card
+            .img
+              img(src="images/promoter2.jpg" alt="img" draggable="false")
+            h2 Tita Sina
+            span Festivals Promoter UK
+            p email: titaS@festivals.co.uk
+            p phone:0744569817
+          li.card
+            .img
+              img(src="images/promoter3.webp" alt="img" draggable="false")
+            h2 Solly K
+            span BBC Radio Station Owner
+            p email: Solly@bcc.ac.uk
+            p phone: 07453212521
+          li.card
+            .img
+              img(src="images/promoter4.jpg" alt="img" draggable="false")
+            h2 Michael May
+            span Venue Owner of Egg London
+            p email: michaelm@egg.co.uk
+            p phone: 0756701234
+        // Right Arrow
+        i#Right.fa-solid.fa-angle-right.arrow-right
+
+  script.
+    // JavaScript to check subscription and show/hide content
+    document.addEventListener("DOMContentLoaded", function() {
+      const isSubscribed = localStorage.getItem('subscribed') === 'true'; // Check subscription status
+      const content = document.querySelector('.wrapper1');
+      const restrictedText = document.getElementById('restricted-text');
+
+      if (isSubscribed) {
+        content.classList.remove('hidden');
+        restrictedText.style.display = 'none';
+      } else {
+        restrictedText.style.display = 'block';
+        content.classList.add('hidden');
+      }
+    })
 
   script(src="script.js")

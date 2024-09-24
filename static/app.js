@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// app.js
+// app.jsx
 
 // Function to apply for an opportunity
 function applyForOpportunity(opportunityId) {
@@ -54,5 +54,6 @@ signUpBtnLink.addEventListener('click', () => {
 signInBtnLink.addEventListener('click', () => {
     wrapper.classList.toggle('active');
 });
+
 
 

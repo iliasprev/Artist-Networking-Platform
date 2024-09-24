@@ -1,0 +1,78 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Consent and Free Subscription Form
+    link(rel="stylesheet" href="consent.css")
+
+  body
+    // Header with Logo and Navbar
+    header
+      nav.navbar
+        .navbar__container
+          a#navbar__logo(href="/")
+            img.logo-image(src="images/mylogogr.png" alt="GrooveGrid Logo")
+            | GrooveGrid
+          #mobile-menu.navbar_toggle
+            span.bar
+            span.bar
+            span.bar
+          ul.navbar__menu
+            li.navbar__item
+              a.navbar__links(href="/") Home
+            li.navbar__item
+              a.navbar__links(href="Network.html") Network
+            li.navbar__item
+              a.navbar__links(href="opportunities.html") Opportunities
+            li.navbar__item
+              a.navbar__links(href="Ourstory.html") Our Story
+            li.navbar__btn
+              a.button(href="signin.html") Sign In/Sign Up
+
+    // Consent Form Section
+    p.consnet-info By sumbiting your details, you agree to have your name, role, email, and phone number publicly displayed on our website for potential bookings and collaborations. You can request removal at any time by contacting us. Your information will only be used for professional purposes ❗❗ ⚠️	⚠️	
+
+ 
+
+    .consent-container
+      h2 Apply to Be Listed on Our Website
+      form(action="consent" method="POST")
+        // Contact Information Section
+        fieldset
+          legend Contact Information
+
+          label(for="fullName") Full Name:
+          input#full-name(type="text" name="fullName" required)
+          br
+          br
+
+          label(for="role") Role (Artist/Manager):
+          input#role(type="text" name="role" required)
+          br
+          br
+
+          label(for="email") Email:
+          input#email(type="email" name="email" required)
+          br
+          br
+
+          label(for="phone") Phone Number:
+          input#phone(type="tel" name="phone" required)
+          br
+          br
+
+          p By ticking the box below, you consent to having your name, role, email, and phone number displayed publicly on our website for potential bookings and collaborations. You can request removal at any time by contacting us at groovegrid@gmail.com.Your Information will be reviewed and if you are succesfull we will contact via email
+
+          input#consent(type="checkbox" name="consent" required)
+          label(for="consent") I agree to have my information displayed publicly.
+          br
+          br
+
+        // Submit Button for Contact Information
+        input(type="submit" value="Submit Information")
+        br
+        br
+
+        // Register Button
+        //- a.register-button(href="signup.html")

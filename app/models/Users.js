@@ -87,7 +87,22 @@ async addProfile(para){
     return true;
 }
 // new ilias code payment here//
-
+// INSIDE Consent {
+//     web-1         |   'full-name': 'Chris Steward',
+//     web-1         |   role: 'House Dj',
+//     web-1         |   email: 'whatever@gmail.com',
+//     web-1         |   phone: '07411192543',
+//     web-1         |   consent: 'on'
+//     web-1         | }
+async Bu_consent(bu_info){
+    var minm = 10000000; 
+    var maxm = 99999999; 
+    var id = Math.floor(Math.random() * (maxm - minm + 1)) + minm; 
+    var sql = "INSERT INTO BU_consent (fullName ,role, email,phone,consent,bu_id) VALUES (? , ? , ?, ? , ?,?)";
+    const result = await db.query(sql, [bu_info.fullName, bu_info.role ,bu_info.email, bu_info.phone, bu_info.consent,id]);
+    console.log("Result from addUser",result);
+    return true;
+}
 
 //ends ilias code here payment//
 
