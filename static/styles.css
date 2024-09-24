@@ -1188,13 +1188,20 @@ button {
     outline: none;
 }
 
+HEAD
 .login-button{
         background-color: #ff8177;
         height: 30px;
         width: 100%;
         border: 1px solid black;
         border-radius: 10px;
-   
+}
+.login-button { 
+    background-color: #ff8177;
+    height: 30px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 
